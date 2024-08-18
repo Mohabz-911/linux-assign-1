@@ -23,7 +23,7 @@ int main(int argc, char ** argv)
         printf("ERROR: File \"%s\" does not exist\n", argv[1]);
         return -1;
     }
-    copy_fd = open(argv[2], O_CREAT|O_RDWR, S_IRWXU);
+    copy_fd = open(argv[2], O_CREAT|O_WRONLY, S_IRWXU);
 
     // Copy the content
     while(1){
